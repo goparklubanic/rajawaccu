@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rajawali Accu</title>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bidho.js"></script>
+  <script src="js/katalog.js"></script>
+  <link rel="stylesheet" href="css/bidho.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="page-title">
+      <div>
+        <button type="button" class="btn btn-default btn-sm" id="kondur">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </button>
+        <button type="button" class="btn btn-default btn-sm" id="katalogAdd">
+          <span class="glyphicon glyphicon-plus"></span> Tambah
+        </button>
+      </div>
+      <p>KATALOG ACCU</p>
+    </div>
+    <div id="testResponse">
+
+    </div>
+    <div class='content-list list-group' id="katalogList">
+      <li class='list-group-item'>
+        <p class='katalog1'>001 NS GX123</p>
+        <p class='katalog2'>120 AH, 80 Kg</p>
+      </li>
+      <li class='list-group-item'>
+        <p class='katalog1'>002 NS GX121</p>
+        <p class='katalog2'>100 AH, 80 Kg</p>
+      </li>
+      <li class='list-group-item'>
+        <p class='katalog1'>003 NS GX120</p>
+        <p class='katalog2'>100 AH, 80 Kg</p>
+      </li>
+      <li class='list-group-item'>
+        <p class='katalog1'>004 NS GX119</p>
+        <p class='katalog2'>80 AH, 50 Kg</p>
+      </li>
+    </div> <!-- content list -->
+
+  </div> <!-- container -->
+
+  <!-- modals -->
+  <!-- Modal -->
+<div id="katalogModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="accuId"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="list-group">
+          <li class="list-group-item" id="katChg">Diubah</li>
+          <li class="list-group-item" id="katRmv">Dihapus</li>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <!-- modals -->
+
+</body>
+</html>

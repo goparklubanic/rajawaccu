@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rajawali Accu</title>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bidho.js"></script>
+  <script src="js/stok.js"></script>
+  <link rel="stylesheet" href="css/bidho.css">
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class="page-title">
+      <div>
+        <button type="button" class="btn btn-default btn-sm" id="kondur">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </button>
+        <button type="button" class="btn btn-default btn-sm" id="stokAdd">
+          <span class="glyphicon glyphicon-plus"></span> Tambah
+        </button>
+      </div>
+      <p>STOK ACCU</p>
+    </div>
+    <div class='content-list list-group' id="stokInfo">
+      <li class='list-group-item'>
+        <p class='katalog1'>001N041200 - 3</p>
+        <p class='katalog2'>NS GX 123</p>
+        <p class='katalog3'>Rp. 1.400.000 - Rp. 1.150.000</p>
+      </li>
+      <li class='list-group-item'>
+        <p class='katalog1'>001X0412001 - 1</p>
+        <p class='katalog2'>NS GX 123</p>
+        <p class='katalog3'>Rp. 420.000 - Rp. 350.000</p>
+      </li>
+      <li class='list-group-item'>
+        <p class='katalog1'>001N0412002 - 1</p>
+        <p class='katalog2'>NS GX 123</p>
+        <p class='katalog3'>Rp. 380.000 - Rp. 340.000</p>
+      </li>
+    </div> <!-- content list -->
+  </div>
+  <!-- modals -->
+  <!-- Modal -->
+<div id="stokModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="stokId"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="list-group">
+          <li class="list-group-item" id="stokChg">Diubah</li>
+          <li class="list-group-item" id="stokRmv">Dihapus</li>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <!-- modals -->
+</body>
+</html>

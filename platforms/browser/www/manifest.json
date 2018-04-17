@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Rajawali Accu",
+  "short_name": "Rajawali Accu",
+  "version": "com.phonegap.helloworld",
+  "description": "Tata Kelola Toko Rajawali Accu",
+  "author": "Oom Nunuk",
+  "icons": [],
+  "start_url": "index.html"
+}
