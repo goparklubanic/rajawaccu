@@ -4,6 +4,7 @@ $(document).ready( function(){
   });
 
   $("#stokAdd").click( function(){
+    localStorage.setItem('stokId','');
     localStorage.setItem('katId','');
     window.location="fstok.html";
   });

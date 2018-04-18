@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rajawali Accu</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bidho.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bidho.js"></script>
+  <script src="js/rongsok.js"></script>
+  <style>
+  .rongsokLabel {width: 100px; padding: 2px; }
+  .infokilo { margin:1px 5px; padding: 1px 5px; }
+  .infokilo p { margin:0; padding: 5px 0px; }
+  #formPerkilo {display: none; }
+  .raka { float: right; margin-right: 2px; }
+  </style>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class="page-title">
+      <div>
+        <button type="button" class="btn btn-default btn-sm" id="kondur">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </button>
+        <button type="button" class="btn btn-default btn-sm" id="mbalik">
+          <span class="glyphicon glyphicon-arrow-left"></span> Kembali
+        </button>
+      </div>
+      <p>RONGSOKAN ACCU</p>
+    </div>
+
+    <div id="infoPerkilo" class='infokilo'>
+      <p><label class='rongsokLabel'>Harga per kilo</label>: <span id="regaKiloan"></span></p>
+      <p><label class='rongsokLabel'>Berlaku sejak</label>: <span id="tglBerlaku"></span></p>
+      <button class='form-control btn btn-default' id="chgHarga">Ganti harga</button>
+    </div>
+    <div id="formPerkilo" class='infokilo'>
+      <div class="form-group">
+        <input type='number' class='form-control' id="hargarongsok" placeholder="Harga baru" />
+      </div>
+      <div class="form-group">
+        <button class='form-control btn btn-default' id="setHarga">Update</button>
+      </div>
+    </div>
+    <h3>Daftar Rongsokan</h3>
+    <div class="list-group" id="rongsokList">
+      <li class='list-group-item'>
+        <p>Merek Tipe [kodeBarang]
+          <span class="glyphicon glyphicon-trash raka"></span>
+        </p>
+      </li>
+      <li class='list-group-item'>
+        <p>Merek Tipe [kodeBarang]
+          <span class="glyphicon glyphicon-trash raka"></span>
+        </p>
+      </li>
+      <li class='list-group-item'>
+        <p>Merek Tipe [kodeBarang]
+          <span class="glyphicon glyphicon-trash raka"></span>
+        </p>
+      </li>
+    </div>
+
+  </div> <!-- container -->
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rajawali Accu</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bidho.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bidho.js"></script>
+  <script src="js/revenue.js"></script>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class="page-title">
+      <div>
+        <button type="button" class="btn btn-default btn-sm" id="kondur">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </button>
+      </div>
+      <p>PENDAPATAN</p>
+    </div>
+    <div class="rwForm">
+      <div class="form-group">
+        <button id="hariIni" class="form-control">Hari ini</button>
+      </div>
+      <div class="form-group">
+        <button id="bulanIni" class="form-control">Bulan ini</button>
+      </div>
+      <div class="form-group">
+        <input type='date' class="form-control" id='pdptTanggal' />
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="pdptBulan"></select>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Transaksi</th>
+            <th>Laba</th>
+          </tr>
+        </thead>
+        <tbody id='datalaba'>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div> <!-- container -->
+
+</body>
+</html>
