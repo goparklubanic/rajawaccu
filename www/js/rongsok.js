@@ -7,7 +7,7 @@ $(document).ready( function(){
     window.location = 'index.html';
   });
 
-  $.post(serverurl+"/dedauran.php",{
+  $.post(serverurl+"dedauran.php",{
     dest : 'getHarga'
   },function(harga){
     var data = JSON.parse(harga);
@@ -17,7 +17,7 @@ $(document).ready( function(){
     localStorage.setItem('perkilo',data.regadb);
   });
 
-  $.post(serverurl+"/dedauran.php",{
+  $.post(serverurl+"dedauran.php",{
     dest : 'rombengan'
   },function(data){
     $("#rongsokList li").remove();
@@ -40,7 +40,7 @@ $(document).ready( function(){
   });
 
   $("#setHarga").click( function(){
-    $.post(serverurl+"/dedauran.php",{
+    $.post(serverurl+"dedauran.php",{
       dest : 'setHarga',
       rega : $("#hargarongsok").val(),
     },function(){
@@ -50,7 +50,7 @@ $(document).ready( function(){
 });
 
 function rombengme(kb){
-  $.post(serverurl+"/dedauran.php",{
+  $.post(serverurl+"dedauran.php",{
     dest : 'rombengin',
     accu : kb,
     rega : localStorage.getItem('perkilo')

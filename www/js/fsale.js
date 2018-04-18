@@ -23,6 +23,14 @@ $(document).ready( function(){
   var tgJual = yy+"-"+mm+"-"+dd;
   $("#tgJual").val(tgJual);
 
+  $("#kodeBarang").focus( function(){
+    $.ajax({url:serverurl+"ajax.php?rqs=debar",
+      success:function(barang){
+        $("#acculist").html(barang);
+      }
+    });
+  });
+
   $("input[name='jenisTransaksi']").click( function(){
     var index = $( "input[name='jenisTransaksi']" ).index( this );
     var jntrx = $("input[name='jenisTransaksi']").eq(index).val();
@@ -41,7 +49,7 @@ $(document).ready( function(){
 
     var djual = JSON.stringify(jual);
 
-    $.post(serverurl+"/dodolan.php",{
+    $.post(serverurl+"dodolan.php",{
       dest : 'akimetu',
       data : djual
     }, function(response){

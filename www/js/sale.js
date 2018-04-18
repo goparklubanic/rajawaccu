@@ -35,6 +35,7 @@ $(document).ready( function(){
       window.location = "fsale.html";
     });
   });
+
 });
 
 function buangTrx(saleId){

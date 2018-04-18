@@ -1,7 +1,7 @@
 $(document).ready( function(){
   var stokId = localStorage.getItem('stokId');
   if( stokId != '' && stokId != null ){
-    $.post(serverurl+"/panduwe.php",{
+    $.post(serverurl+"panduwe.php",{
       dest    : 'stokData',
       stokId  : stokId
     },function(stokData){
@@ -20,6 +20,14 @@ $(document).ready( function(){
   }
   $("#kondur").click( function(){
     window.location="index.html";
+  });
+
+  $("#katId").focus( function(){
+    $.ajax({url:serverurl+"ajax.php?rqs=katalis",
+      success:function(katalis){
+        $("#katalis").html(katalis);
+      }
+    });
   });
 
   $("#mbalik").click( function(){
@@ -72,7 +80,7 @@ $(document).ready( function(){
     var jstok = JSON.stringify(stok);
     // console.log('json',jstok);
 
-    $.post(serverurl+"/panduwe.php",{
+    $.post(serverurl+"panduwe.php",{
       dest : 'stokMasuk',
       stok : jstok
     },function(response){
@@ -98,7 +106,7 @@ $(document).ready( function(){
     var jstok = JSON.stringify(stok);
     // console.log('json',jstok);
 
-    $.post(serverurl+"/panduwe.php",{
+    $.post(serverurl+"panduwe.php",{
       dest : 'stokGanti',
       stok : jstok
     },function(response){
@@ -120,7 +128,7 @@ function urutseek(kondisi){
   if(kondisi =='N'){
     localStorage.setItem('urut','00');
   }else{
-    $.post(serverurl+"/panduwe.php",{
+    $.post(serverurl+"panduwe.php",{
       dest  : 'urutaki',
       kond  : kondisi
     },function(urut){

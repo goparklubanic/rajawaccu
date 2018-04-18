@@ -14,7 +14,7 @@ $(document).ready( function(){
   }
 
   $("#hariIni").click( function(){
-    $.post(serverurl+"/bathen.php",{
+    $.post(serverurl+"bathen.php",{
       filter: 'today'
     },function(revenue){
       showBathen(revenue);
@@ -22,7 +22,7 @@ $(document).ready( function(){
   });
 
   $("#bulanIni").click( function(){
-    $.post(serverurl+"/bathen.php",{
+    $.post(serverurl+"bathen.php",{
       filter: 'thisMonth'
     },function(revenue){
       showBathen(revenue);
@@ -32,7 +32,7 @@ $(document).ready( function(){
   $("#pdptTanggal").on('change', function(){
     var tgl = $("#pdptTanggal").val();
 
-    $.post(serverurl+"/bathen.php",{
+    $.post(serverurl+"bathen.php",{
       filter: tgl
     },function(revenue){
       showBathen(revenue);
@@ -40,7 +40,7 @@ $(document).ready( function(){
   });
 
   $("#pdptBulan").on('change', function(){
-    $.post(serverurl+"/bathen.php",{
+    $.post(serverurl+"bathen.php",{
       filter: $("#pdptBulan").val()
     },function(revenue){
       showBathen.log(revenue);
@@ -66,13 +66,14 @@ function showBathen(data){
     $("#datalaba").append(
       "<tr>"+
       "<td>"+laba.trx+"</td>"+
+      "<td align='right'>"+laba.qty+"</td>"+
       "<td align='right'>"+laba.cash+"</td>"+
       "</tr>"
     );
   });
   $("#datalaba").append(
     "<tr>"+
-    "<td>Tot. Pendapatan</td>"+
+    "<td colspan='2'>Total  Pendapatan</td>"+
     "<td align='right'>"+bathen.total+"</td>"+
     "</tr>"
   );
@@ -82,7 +83,7 @@ function showRevenue(tgl){
   var tanggal = toString(tgl);
   console.log('tanggal',tanggal);
 
-  $.post(serverurl+"/bathen.php",{
+  $.post(serverurl+"bathen.php",{
     filter: tanggal
   },function(revenue){
     showBathen(revenue);

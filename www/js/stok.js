@@ -9,7 +9,7 @@ $(document).ready( function(){
     window.location="fstok.html";
   });
 
-  $.post(serverurl+"/panduwe.php",{
+  $.post(serverurl+"panduwe.php",{
       dest : 'stokInfo'
   },function(stokInfo){
     var stok = JSON.parse(stokInfo);
@@ -34,7 +34,7 @@ $(document).ready( function(){
     var stokId = localStorage.getItem('stokId');
     var busek = confirm('Stok dihapus permanen !');
     if ( busek == true ){
-      $.post(serverurl+"/panduwe.php",{
+      $.post(serverurl+"panduwe.php",{
         dest  : 'stokHilang',
         recId : stokId
       },function(response){

@@ -11,7 +11,7 @@ $(document).ready( function(){
   });
 
 
-  $.post(serverurl+"/pancake.php",{
+  $.post(serverurl+"pancake.php",{
     dest: 'katList'
   }, function(response){
     // console.log(response);

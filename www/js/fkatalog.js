@@ -4,7 +4,7 @@ $(document).ready( function(){
 
   if(katId != null && katId != ''){
     $("#catId").val(katId);
-    $.post(serverurl+"/pancake.php",{
+    $.post(serverurl+"pancake.php",{
       dest  : 'katInfo',
       katId : katId
     },function(katData){
@@ -26,7 +26,7 @@ $(document).ready( function(){
                 "tipe":$("#tipe").val(),
                 "kapasitas":$("#kapasitas").val(),
                 "berat":$("#berat").val() } ;
-    $.post(serverurl+"/pancake.php",{
+    $.post(serverurl+"pancake.php",{
       dest  : 'katUbah',
       info  : data
     },function(response){
