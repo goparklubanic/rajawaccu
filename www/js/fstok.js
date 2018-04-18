@@ -34,10 +34,12 @@ $(document).ready( function(){
     window.location="stok.html";
   });
 
-  $("#katId").blur( function(){
+  /*
+  $("#katId").change( function(){
     var kode = $(this).val();
     setKodeAccu(kode);
   });
+  */
 
   $(".battCond").click( function(){
     var index = $( ".battCond" ).index( this );
