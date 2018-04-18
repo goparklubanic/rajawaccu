@@ -1,1 +1,1 @@
-var serverurl = "http://ngh.mugeno.org/rajawaliAccu/stasiun";
+var serverurl = "https://rajawaliaccu.klubaners.web.id/";
