@@ -1,6 +1,6 @@
 $(document).ready( function(){
 
-  $.post(serverurl+"/dodolan.php",{
+  $.post(serverurl+"dodolan.php",{
     dest : 'saleInfo'
   },function(saleInfo){
     var sf = JSON.parse(saleInfo);
@@ -27,7 +27,7 @@ $(document).ready( function(){
   });
 
   $("#saleAdd").click( function(){
-    $.post(serverurl+"/dodolan.php",{
+    $.post(serverurl+"dodolan.php",{
       dest  : 'saleId'
     },function(response){
       console.log(response);
