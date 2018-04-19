@@ -77,6 +77,15 @@ function showBathen(data){
     "<td align='right'>"+bathen.total+"</td>"+
     "</tr>"
   );
+
+  var bosokan = bathen.rombeng;
+  $("#revenueRongsok").html(
+    "<tr>"+
+    "<td>"+bosokan.item+"</td>"+
+    "<td align='right'>"+bosokan.berat+"</td>"+
+    "<td align='right'>Rp. "+bosokan.pendapatan+"</td>"+
+    "</tr>"
+  );
 }
 
 function showRevenue(tgl){
