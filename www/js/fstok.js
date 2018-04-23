@@ -18,12 +18,14 @@ $(document).ready( function(){
       $("#hargaTT").val(data.hargaTT);
     });
   }
+
   $("#kondur").click( function(){
     window.location="index.html";
   });
 
-  $("#katId").focus( function(){
-    $.ajax({url:serverurl+"ajax.php?rqs=katalis",
+  $("#katId").keyup( function(){
+    var merk=$(this).val();
+    $.ajax({url:serverurl+"ajax.php?rqs=katalis&tm="+merk,
       success:function(katalis){
         $("#katalis").html(katalis);
       }
