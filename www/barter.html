@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rajawali Accu</title>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bidho.js"></script>
+  <script src="js/barter.js"></script>
+  <link rel="stylesheet" href="css/bidho.css">
+  <style>
+    #catAki {display:none;}
+  </style>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class="page-title">
+      <div>
+        <button type="button" class="btn btn-default btn-sm" id="kondur">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </button>
+        <button type="button" class="btn btn-default btn-sm" id="mbalik">
+          <span class="glyphicon glyphicon-arrow-left"></span> Kembali
+        </button>
+      </div>
+      <p>TUKAR TAMBAH</p>
+    </div>
+    <div class="rw-form">
+      <div class="form-group">
+        <input class="form-control" type='text' id="saleId" readonly />
+      </div>
+      <div class="form-group">
+        <input class="form-control" type='text' id="tgJual" readonly />
+      </div>
+      <div class="form-group">
+        <div class="radio">
+          <label><input type="radio" name="jenisTransaksi" value="TB" />
+            Tukar Tambah Aki Baru</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="jenisTransaksi" value="TS" />
+            Tukar Tambah Aki Seken</label>
+        </div>
+
+      </div>
+
+      <fieldset>
+        <legend>Aki Keluar</legend>
+        <div class="form-group mepet">
+          <input class="form-control" type='text' id="kodeBarang" placeholder="Kode Barang" />
+          <div class='list-group-item' id="acculist" style="display:none;"></div>
+          <script>
+            function setKobar(debar,price){
+              document.getElementById('kodeBarang').value=debar;
+              document.getElementById('hargaJual').value=price;
+              document.getElementById('acculist').style.display='none';
+            }
+          </script>
+        </div>
+        <div class="form-group" style="display:none;">
+          <input class="form-control" type='number' id="banyak" placeholder="Banyaknya" value="1" />
+        </div>
+        <div class="form-group mepet">
+          <input class="form-control" type='number' id="hargaJual" placeholder="Harga Jualan Satuan" />
+        </div>
+        <button class="form-control btn btn-primary" id="saleSubmit">Simpan</button>
+        <div id="saleResponse"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Aki Masuk</legend>
+        <div class='form-group'>
+          <input type='text' class='form-control' id='kdAki' placeholder="Kode Barang" />
+        </div>
+        <div id="catAki" class="list-group"></div>
+        <div class='form-group'>
+          <input type='number' class='form-control' id='hargaRx' placeholder="Harga Kiloan" />
+        </div>
+        <div class='form-group'>
+          <input type='number' class='form-control' id='hargaTT' placeholder="Harga Tukar Tambah" />
+        </div>
+        <div id="stokResponse"></div>
+        <div class='form-group'>
+          <button class="form-control btn btn-primary" id="stokSubmit">Simpan</button>
+        </div>
+      </fieldset>
+      <div class="form-group" id="btnSubmit" style="display:none;">
+        <button class="form-control btn btn-primary" id="saleSubmit">Simpan</button>
+      </div>
+      <div class="form-group" id="btnUpdate" style="display:none;">
+        <button class="form-control btn btn-primary" id="saleUpdate">Update</button>
+      </div>
+      <div id="saleResponse"></div>
+    </div>
+  </div> <!-- container -->
+</body>
+</html>

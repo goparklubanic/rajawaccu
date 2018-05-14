@@ -23,18 +23,20 @@ $(document).ready( function(){
   var tgJual = yy+"-"+mm+"-"+dd;
   $("#tgJual").val(tgJual);
 
-  $("#kodeBarang").focus( function(){
-    $.ajax({url:serverurl+"ajax.php?rqs=debar",
-      success:function(barang){
-        $("#acculist").html(barang);
-      }
-    });
-  });
-
   $("input[name='jenisTransaksi']").click( function(){
     var index = $( "input[name='jenisTransaksi']" ).index( this );
     var jntrx = $("input[name='jenisTransaksi']").eq(index).val();
     localStorage.setItem('jntrx',jntrx);
+  });
+
+  $("#kodeBarang").focus( function(){
+    var jntrx = localStorage.getItem('jntrx');
+    
+    $.ajax({url:serverurl+"ajax.php?rqs=debars&at="+jntrx,
+      success:function(barang){
+        $("#acculist").html(barang);
+      }
+    });
   });
 
   $("#saleSubmit").click( function(){

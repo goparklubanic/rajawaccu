@@ -25,7 +25,7 @@
           <span class="glyphicon glyphicon-arrow-left"></span> Kembali
         </button>
       </div>
-      <p>PENJUALAN / TUKAR TAMBAH</p>
+      <p>PENJUALAN</p>
     </div>
     <div class="rw-form">
       <div class="form-group">
@@ -37,23 +37,21 @@
       <div class="form-group">
         <div class="radio">
           <label><input type="radio" name="jenisTransaksi" value="JB" />
-            Jual Beli Baru/Bekas</label>
+            Penjualan Aki Baru</label>
         </div>
         <div class="radio">
-          <label><input type="radio" name="jenisTransaksi" value="TT" />
-            Tukar Tambah</label>
+          <label><input type="radio" name="jenisTransaksi" value="JS" />
+            Penjualan Aki Seken</label>
         </div>
-        <div class="radio">
-          <label><input type="radio" name="jenisTransaksi" value="JR" />
-            Jual Rongsok</label>
-        </div>
+
       </div>
       <div class="form-group">
         <input class="form-control" type='text' id="kodeBarang" placeholder="Kode Barang" />
         <div class='list-group-item' id="acculist"></div>
         <script>
-          function setKobar(debar){
+          function setKobar(debar,price){
             document.getElementById('kodeBarang').value=debar;
+            document.getElementById('hargaJual').value=price;
             document.getElementById('acculist').style.display='none';
           }
         </script>
